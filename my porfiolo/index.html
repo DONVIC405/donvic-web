@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donvic Portfolio</title>
+  <link rel = "stylesheet" href="style.css">
+ 
+  <script>
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      const whatsappNumber = "2349132292723";
+      const text = `Hello Donvic, my name is ${name}. My email is ${email}. Here is my project message: ${message}`;
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Donvic's Website Portfolio</h1>
+    <p>Frontend Web Developer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Work Samples</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm Emmanuel Ayo, the creative mind behind Donvic Website.
+
+I’m a passionate Web Developer, skilled in crafting beautiful, responsive websites that are both functional and user-friendly. Beyond web development, I specialize in:
+
+💾 Database Management – building reliable data systems for efficient performance
+
+🎨 Graphics Design – creating eye-catching visuals that bring brands to life
+
+🎬 Video Editing – producing captivating videos that engage and communicate clearly
+
+At Donvic Website, I blend creativity with technical skill to help individuals, startups, and businesses grow their digital presence. Whether it's a simple portfolio, a business website, or a complete brand transformation — I’m here to deliver.
+
+Let’s bring your ideas to life.</p>
+  </section>
+
+  <section id="services">
+    <h2>My Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h4>Web Development</h4>
+        <p>Modern, responsive, and interactive websites built with HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="service-box">
+        <h4>Database Management</h4>
+        <p>Organizing and managing databases for efficient data storage and access.</p>
+      </div>
+      <div class="service-box">
+        <h4>Graphics Design</h4>
+        <p>Creating visual content like posters, logos, and social media designs using modern tools.</p>
+      </div>
+      <div class="service-box">
+        <h4>Video Editing</h4>
+        <p>Editing and producing professional-quality videos for various platforms and projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Animated Landing Page</h3>
+      <p>A stylish, scroll-reveal animated homepage showcasing modern UI trends.</p>
+    </div>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>This website you're viewing! Built with pure HTML, CSS animations, and vanilla JavaScript.</p>
+    </div>
+  </section>
+
+  
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-form">
+      <h3>Let's Work Together!</h3>
+      <form onsubmit="sendToWhatsApp(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+        <button type="submit">Send Message on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Donvic. All rights reserved.</p>
+  </footer>
+</body>
+</html>
